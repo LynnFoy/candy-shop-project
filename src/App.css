@@ -1,0 +1,293 @@
+/* Importation des styles slick-carousel */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+/* Désactiver le chargement des polices Slick */
+.slick-carousel .slick-prev,
+.slick-carousel .slick-next {
+  font-family: initial !important;
+}
+
+/* Style de base du projet */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fbe9f7; /* Fond pastel rose plus clair */
+  color: #5d3f47; /* Gris-violacé foncé pour un look plus mystérieux */
+  overflow-x: hidden;
+  background-image: url('https://example.com/your-dark-pattern.jpg'); /* Ajouter un motif léger, mais plus subtil */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1); /* Effet de filtre léger et doux */
+  pointer-events: none;  /* Empêche l'interférence avec les éléments interactifs */
+}
+
+/* Enlever le soulignement des liens partout dans le projet */
+a {
+  text-decoration: none;
+  color: #9b68c3; /* Couleur des liens légèrement violacée */
+}
+
+a:hover {
+  color: #e8a0c5; /* Lien devient rose pastel au survol */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Ombre sur le texte au survol */
+}
+
+/* Style de la Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fad0e6;  /* Rose pastel doux */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);  /* Ombre forte et marquée */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: #f8a8d2; /* Rose pastel encore plus clair au survol */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+}
+
+.navbar-logo h1 {
+  font-family: 'Cursive', sans-serif;
+  color: #d48ad9;
+  font-size: 3rem;  /* Plus grand pour un effet dramatique */
+  margin: 0;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-logo h1:hover {
+  transform: scale(1.1);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);  /* Ombre du texte pour plus de mystère */
+  color: #bc7cbf;  /* Couleur légèrement plus foncée au survol */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-link {
+  font-size: 1.4rem; /* Taille augmentée pour l'impact visuel */
+  color: #d48ad9;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s, transform 0.3s, text-shadow 0.3s ease;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar-link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #d48ad9;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+.navbar-link:hover {
+  color: #bc7cbf;
+  transform: translateY(-5px);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombre intense sur le texte au survol */
+}
+
+.navbar-link:hover::before {
+  width: 100%;
+}
+
+.navbar-link:active {
+  color: #9e5b9d;
+}
+
+/* Navbar scrolled : fond translucide au défilement */
+.navbar-scrolled {
+  background-color: #e8a0c5 !important;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Carrousel */
+.carousel-container {
+  position: relative;
+  width: 60%;
+  max-width: 400px;
+  margin: 50px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  background-color: #f3d9e5;
+  border: 2px solid #d48ad9; /* Bordure détaillée pour le carrousel */
+}
+
+.carousel-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: 'Cursive', 'Courier New', monospace;
+  color: #ff66b2;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;  /* Espacement pour un effet dramatique */
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  font-size: 1.5rem;
+  padding: 12px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Ombre autour des boutons */
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease-in-out;
+}
+
+/* Ajuster la taille des images pour qu'elles aient la même taille */
+.carousel-image {
+  width: 100%;
+  height: 250px; /* Fixer une hauteur pour uniformiser la taille des images */
+  object-fit: cover; /* Assurer que l'image s'ajuste correctement sans déformation */
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Effet d'agrandissement des images au survol */
+}
+
+.carousel-image:hover {
+  transform: scale(1.05); /* Zoom sur l'image au survol */
+}
+
+/* Cartes produits */
+.product-card {
+  width: 200px;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Ombre autour des cartes pour plus de profondeur */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+  background-color: #ffe6f7; /* Un fond rose pâle doux */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  background-color: #f8c1e8; /* Change légèrement la couleur au survol */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); /* Ombre intense au survol */
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;  /* Assurer que l'image n'excède pas cette largeur */
+  margin: 0 auto; /* Centrer l'image dans sa carte */
+  display: block; /* Bloquer l'affichage pour qu'elle prenne toute la largeur de son conteneur sans se déformer */
+  border-radius: 10px; /* Coins arrondis pour un effet plus doux */
+}
+
+.product-card h3 {
+  font-size: 1.4rem; /* Augmentation de la taille du titre */
+  margin-top: 10px;
+  color: #6b2a6f; /* Violet sombre pour le titre */
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #f04a6d;
+  margin-top: 5px;
+}
+
+/* Page de détail du produit */
+.product-detail-page {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  max-width: 350px;
+  border-radius: 15px;
+  border: 2px solid #d48ad9; /* Bordure pour un effet plus détaillé */
+  transition: transform 0.3s ease; /* Zoom sur l'image de produit */
+  display: block;
+  margin-left: auto; /* Centrer l'image horizontalement */
+  margin-right: auto; /* Centrer l'image horizontalement */
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+/* Page du panier */
+.cart-page {
+  padding: 20px;
+}
+
+.cart-image {
+  width: 180px;  /* Maintenir la largeur fixe de l'image */
+  height: 180px; /* Garder la hauteur fixe */
+  object-fit: cover; /* Garder la proportion de l'image */
+  margin-right: 20px; /* Garder un peu d'espace entre l'image et le texte */
+  margin-top: 40px;  /* Ajouter un espace plus grand au-dessus de l'image pour la descendre */
+  display: block;
+  margin-left: auto; /* Centrer l'image dans son conteneur */
+  margin-right: auto; /* Centrer l'image horizontalement */
+}
+
+.cart-page ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ajouter un espace entre les éléments */
+  margin-bottom: 20px;
+}
+
+.cart-page li .cart-image {
+  margin-left: auto;  /* Centrer l'image dans la liste */
+  margin-right: auto; /* Centrer l'image dans la liste */
+}

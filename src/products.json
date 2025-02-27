@@ -1,0 +1,117 @@
+{
+    "chips": [
+      {
+        "id": 1,
+        "name": "Crocky Bicky",
+        "price": 9.99,
+        "image": "/images/chips1.png",
+        "description": "Délicieux chips au goût unique",
+        "stock": 20,
+        "origin": "France"
+      },
+      {
+        "id": 2,
+        "name": "Lay's Bolognese",
+        "price": 5.99,
+        "image": "/images/chips2.png",
+        "description": "Chips au goût bolognaise",
+        "stock": 30,
+        "origin": "USA"
+      },
+      {
+        "id": 3,
+        "name": "Chips Naturel",
+        "price": 7.99,
+        "image": "/images/chips3.png",
+        "description": "Chips nature au goût authentique, 100% naturel",
+        "stock": 25,
+        "origin": "Italie"
+      },
+      {
+        "id": 4,
+        "name": "Chips Paprika Xtra",
+        "price": 8.99,
+        "image": "/images/chips4.png",
+        "description": "Chips au paprika extra piquant",
+        "stock": 40,
+        "origin": "Espagne"
+      }
+    ],
+    "chocolates": [
+      {
+        "id": 5,
+        "name": "Mars",
+        "price": 5.99,
+        "image": "/images/chocolate1.png",
+        "description": "Chocolat au lait crémeux",
+        "stock": 50,
+        "origin": "Belgique"
+      },
+      {
+        "id": 6,
+        "name": "Snickers",
+        "price": 8.99,
+        "image": "/images/chocolate2.png",
+        "description": "Chocolat noir intense, riche en cacao",
+        "stock": 40,
+        "origin": "Suisse"
+      },
+      {
+        "id": 7,
+        "name": "Twix",
+        "price": 9.99,
+        "image": "/images/chocolate3.png",
+        "description": "Chocolat praliné au cœur fondant",
+        "stock": 60,
+        "origin": "France"
+      },
+      {
+        "id": 8,
+        "name": "Bueno White",
+        "price": 3.99,
+        "image": "/images/chocolate4.png",
+        "description": "Chocolat intense avec éclats de noisettes",
+        "stock": 50,
+        "origin": "Belgium"
+      }
+    ],
+    "iceCreams": [
+      {
+        "id": 9,
+        "name": "Magnum amandes",
+        "price": 3.99,
+        "image": "/images/ice_cream1.png",
+        "description": "Glace onctueuse à la vanille",
+        "stock": 40,
+        "origin": "Italie"
+      },
+      {
+        "id": 10,
+        "name": "Glace à l'eau Cola",
+        "price": 4.99,
+        "image": "/images/ice_cream2.png",
+        "description": "Glace crémeuse au chocolat riche",
+        "stock": 50,
+        "origin": "Belgique"
+      },
+      {
+        "id": 11,
+        "name": "Cornetto",
+        "price": 3.99,
+        "image": "/images/ice_cream3.png",
+        "description": "Glace onctueuse à la fraise",
+        "stock": 30,
+        "origin": "France"
+      },
+      {
+        "id": 12,
+        "name": "Magnum Classic",
+        "price": 5.99,
+        "image": "/images/ice_cream4.png",
+        "description": "Crème glacée au chocolat et caramel",
+        "stock": 100,
+        "origin": "Italy"
+      }
+    ]
+  }
+  

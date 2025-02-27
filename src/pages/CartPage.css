@@ -1,0 +1,84 @@
+/* Style général de la page du panier */
+.cart-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Liste des articles dans le panier */
+  .cart-page ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Style des éléments de la liste */
+  .cart-page li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Bordure sous chaque élément */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  /* Style de l'image de chaque article */
+  .cart-image {
+    width: 180px; /* Largeur de l'image */
+    height: 180px; /* Hauteur de l'image */
+    object-fit: cover; /* Conserver la proportion de l'image */
+    margin-right: 30px; /* Espacement entre l'image et les autres informations */
+    border-radius: 8px;
+  }
+  
+  /* Style pour les informations de chaque article */
+  .cart-page li > div {
+    display: flex;
+    flex-direction: column; /* Alignement vertical des informations */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1; /* Prend tout l'espace disponible */
+    text-align: left;
+    margin-left: 20px; /* Décalage vers la droite */
+  }
+  
+  /* Total du panier */
+  .cart-total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Style de la page vide du panier */
+  .cart-page p {
+    font-size: 18px;
+    color: #777;
+  }
+  
+  /* Ajustements pour les petits écrans */
+  @media (max-width: 768px) {
+    .cart-page {
+      padding: 10px;
+    }
+  
+    .cart-page li {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cart-image {
+      width: 150px; /* Ajuster la taille de l'image sur les petits écrans */
+      height: 150px;
+    }
+  
+    .cart-total {
+      text-align: center;
+    }
+  }
+  

@@ -1,0 +1,50 @@
+/* src/pages/ErrorPage.css */
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement */
+    align-items: center;     /* Centre horizontalement */
+    min-height: 100vh;       /* Prend toute la hauteur de la page */
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    background-color: #fbe9f7;  /* Fond pastel rose plus clair */
+    color: #5d3f47;  /* Gris-violacé foncé pour le texte */
+    text-align: center;
+  }
+  
+  .error-page h2 {
+    font-size: 3rem;
+    color: #ff66b2;  /* Couleur rose pastel pour le titre */
+  }
+  
+  .error-page p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #777;  /* Gris clair pour le texte descriptif */
+  }
+  
+  /* Style du bouton "Retour à l'accueil" */
+  .back-home-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #fad0e6, #9b68c3);  /* Dégradé rose pastel et mauve */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;  /* Coins arrondis */
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .back-home-btn:hover {
+    background: linear-gradient(135deg, #9b68c3, #fad0e6);  /* Inverser les couleurs au survol */
+    transform: translateY(-3px);  /* Effet de léger déplacement au survol */
+  }
+  
+  .back-home-btn:active {
+    background: #9b68c3;  /* Changer la couleur lors du clic */
+    transform: translateY(2px);  /* Effet de "foncer" lors du clic */
+  }
+  

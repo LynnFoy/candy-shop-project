@@ -1,0 +1,123 @@
+/* src/pages/HomePage.css */
+.home-page {
+    padding: 50px 30px; /* Padding ajusté pour un meilleur espacement */
+    background-color: #f7d9e1; /* Fond rose clair légèrement plus doux */
+    font-family: 'Poppins', sans-serif; /* Police moderne et élégante */
+    min-height: 100vh; /* Assurer que la page couvre toute la hauteur */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Titre de la section */
+.section-title {
+    font-size: 40px; /* Taille de police agrandie */
+    font-weight: 600;
+    color: transparent; /* Texte transparent pour que le dégradé fonctionne */
+    background: linear-gradient(135deg, #ff66b2, #9b68c3); /* Dégradé de couleur */
+    -webkit-background-clip: text; /* Applique l'arrière-plan au texte */
+    background-clip: text; /* Pour les autres navigateurs compatibles */
+    text-align: center;
+    margin-bottom: 50px; /* Espacement en dessous du titre */
+    margin-top: 80px; /* Ajoute un peu d'espace avant le titre */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espacement entre les lettres */
+}
+
+/* Alignement horizontal des images en vedette */
+.product-container {
+    display: flex; /* Utilisation de flexbox pour aligner horizontalement */
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    gap: 25px; /* Espacement entre les images (plus large pour mieux les voir) */
+    margin-top: 50px; /* Plus d'espace avant les produits */
+    flex-wrap: nowrap; /* Les images restent sur une seule ligne */
+    overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+    padding: 10px 0; /* Un peu d'espace autour des images */
+    max-width: 1600px; /* Conteneur plus large pour mieux afficher les images */
+    margin-left: auto;
+    margin-right: auto; /* Centrer le conteneur */
+}
+
+/* Style de chaque image produit */
+.product-image {
+    width: 350px; /* Largeur agrandie des images */
+    height: 450px; /* Hauteur agrandie des images */
+    object-fit: cover; /* Garder la proportion des images */
+    border-radius: 20px; /* Coins arrondis plus larges */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol des images */
+.product-image:hover {
+    transform: scale(1.1); /* Agrandir l'image au survol */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
+}
+
+/* Bouton de redirection vers les pages de catégories */
+.view-more-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #fad0e6, #9b68c3);
+    color: white;
+    font-size: 1.2rem; /* Agrandir la taille du texte */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px; /* Coins plus arrondis */
+    margin-top: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background: linear-gradient(135deg, #9b68c3, #fad0e6);
+    transform: translateY(-5px); /* Effet de soulèvement */
+}
+
+.view-more-btn:active {
+    background: #9b68c3;
+    transform: translateY(2px); /* Réduire l'effet de soulèvement quand il est cliqué */
+}
+
+.category-title {
+    font-size: 32px;
+    margin-top: 100px; /* Augmenter l'espacement au-dessus du titre pour mieux le voir */
+    text-align: center;
+    font-weight: 600;
+    color: #5d3f47;
+    text-transform: uppercase; /* Mettre en majuscule */
+    letter-spacing: 1px; /* Espacement des lettres */
+}
+
+/* Media queries pour une meilleure réactivité sur les petits écrans */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .carousel {
+        justify-content: center; /* Centrer les éléments sur petits écrans */
+    }
+
+    .category-title {
+        font-size: 28px;
+    }
+
+    .product-container {
+        flex-wrap: wrap; /* Sur petits écrans, les images se replieront sur plusieurs lignes */
+        justify-content: center; /* Centrer les images sur mobile */
+    }
+
+    /* Ajuster la taille des images produits sur mobile */
+    .product-image {
+        height: 280px; /* Réduire la taille des images sur les petits écrans */
+        width: 220px; /* Ajuster la largeur sur mobile */
+    }
+
+    /* Bouton sur mobile */
+    .view-more-btn {
+        padding: 12px 25px;
+        font-size: 1rem; /* Réduire la taille du texte */
+    }
+}
