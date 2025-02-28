@@ -1,3 +1,4 @@
+// src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -8,29 +9,30 @@ import IceCreamPage from './pages/IceCreamPage';
 import CartPage from './pages/CartPage';
 import LoginPage from './pages/LoginPage';
 import ProductDetailsPage from './pages/ProductDetailPage';
-import ErrorPage from './pages/ErrorPage'; // Importation de la page d'erreur
-import { CartProvider } from './context/CartContext'; // ✅ Importation du panier
+import ErrorPage from './pages/ErrorPage';
+import { CartProvider } from './context/CartContext';
+import { UserProvider } from './context/UserContext'; // ✅ Importer UserContext
 
 import './App.css';
 
 const App = () => {
   return (
-    <CartProvider> {/* ✅ On englobe toute l'app */}
-      <Router>
-        <Navbar />
-        <Routes> 
-          <Route path="/" element={<HomePage />} />
-          <Route path="/category/chips" element={<ChipsPage />} />
-          <Route path="/category/chocolates" element={<ChocolatePage />} />
-          <Route path="/category/icecream" element={<IceCreamPage />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/product/:name" element={<ProductDetailsPage />} />
-          
-          {/* Route par défaut pour les pages d'erreur */}
-          <Route path="*" element={<ErrorPage />} /> 
-        </Routes>
-      </Router>
+    <CartProvider>
+      <UserProvider> {/* Fournir le UserContext */}
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/category/chips" element={<ChipsPage />} />
+            <Route path="/category/chocolates" element={<ChocolatePage />} />
+            <Route path="/category/icecream" element={<IceCreamPage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/product/:name" element={<ProductDetailsPage />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </Router>
+      </UserProvider>
     </CartProvider>
   );
 };
