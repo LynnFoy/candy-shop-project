@@ -17,7 +17,6 @@ body {
   background-color: #fbe9f7; /* Fond pastel rose plus clair */
   color: #5d3f47; /* Gris-violacé foncé pour un look plus mystérieux */
   overflow-x: hidden;
-  background-image: url('https://example.com/your-dark-pattern.jpg'); /* Ajouter un motif léger, mais plus subtil */
   background-size: cover;
   background-position: center;
   text-align: center;
